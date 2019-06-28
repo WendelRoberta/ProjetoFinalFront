@@ -17,7 +17,7 @@ import { HeaderModule } from './shared/modules/header/header.module';
     CommonModule,
     AppRoutingModule,
     HeaderModule,
-    NgbModule.forRoot()
+    NgbModule
 
   ],
   providers: [],
