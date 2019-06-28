@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/modules/header/header.module';
+import { FooterModule } from './shared/modules/footer/footer.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { HeaderModule } from './shared/modules/header/header.module';
     CommonModule,
     AppRoutingModule,
     HeaderModule,
+    FooterModule,
     NgbModule
 
   ],

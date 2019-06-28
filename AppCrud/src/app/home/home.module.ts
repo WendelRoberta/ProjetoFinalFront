@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderModule, FooterModule } from '../shared';
 
+
 @NgModule({
   declarations: [HomeComponent],
   imports: [
