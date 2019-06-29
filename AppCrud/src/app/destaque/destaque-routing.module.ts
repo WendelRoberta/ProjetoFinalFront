@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { DestaqueComponent } from './destaque.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/destaque', pathMatch: 'full' },
   { path: '', component: DestaqueComponent,
 
 
