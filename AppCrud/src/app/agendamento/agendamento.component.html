@@ -7,10 +7,8 @@
       <table class="table table-products">
         <thead class="shadow-sm thead-light">
           <tr>
-            <th scope="col">
-              #
-            </th>
-            <th scope="col">Nome</th>
+            <th scope="col">#</th>
+            <th scope="col-">Nome</th>
             <th scope="col">Telefone</th>
             <th scope="col">Email</th>
             <th scope="col">Local de evento</th>
@@ -20,23 +18,39 @@
       <tbody>
         <tr *ngFor="let product of products">
           <td scope="row">
-            {{ agendamento.nome }}
+            {{ agendamento.id }}
           </td>
           <td>
             <div>
-                <a href="#" class="text-body">{{ agendamento.telefone }}</a>
+                <a href="#" class="text-body">{{ agendamento.nome }}</a>
                 <br/>
             </div>
           </td>
           <td>
-            {{ agendamento.email }}
+              <div>
+                  <a href="#" class="text-body">{{ agendamento.telefone}}</a>
+                  <br/>
+              </div>
+            </td>
+          <td>
+              <div>
+                  <a href="#" class="text-body">{{ agendamento.email  }}</a>
+                  <br/>
+              </div>
           </td>
-          <td>{{ agendamento.local }}</td>
-          <td>{{ agendamento.cidade }}</td>
+          <td>
+              <div>
+                  <a href="#" class="text-body">{{ agendamento.local  }}</a>
+                  <br/>
+              </div>
+          </td>
+          <td>
+              <div>
+                  <a href="#" class="text-body">{{ agendamento.cidade }}</a>
+                  <br/>
+              </div>
+          </td>
           <td class="table-action">
-            <button class="btn btn-outline-white action-icon">
-              <span class="fa fa-eye"></span>
-            </button>
             <a class="btn btn-outline-white action-icon" [routerLink]="['/', 'agendamento', agendamento.nome]">
               <span class="fa fa-edit"></span>
             </a>
