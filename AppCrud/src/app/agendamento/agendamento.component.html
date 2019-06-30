@@ -1,1 +1,53 @@
-<p>agendamento works!</p>
+<div class="container bg-dark shadow-sm p-5 mt-4">
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-between align-items-center mb-2">
+      <h2 class="font-weight-white mb-4" id="test">Lista de pedidos para orçamentos</h2>
+    </div>
+    <div class="col-md-12">
+      <table class="table table-products">
+        <thead class="shadow-sm thead-light">
+          <tr>
+            <th scope="col">
+              #
+            </th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Local de evento</th>
+            <th scope="col">Cidade</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td scope="row">
+            {{ agendamento.nome }}
+          </td>
+          <td>
+            <div>
+                <a href="#" class="text-body">{{ agendamento.telefone }}</a>
+                <br/>
+            </div>
+          </td>
+          <td>
+            {{ agendamento.email }}
+          </td>
+          <td>{{ agendamento.local }}</td>
+          <td>{{ agendamento.cidade }}</td>
+          <td class="table-action">
+            <button class="btn btn-outline-white action-icon">
+              <span class="fa fa-eye"></span>
+            </button>
+            <a class="btn btn-outline-white action-icon" [routerLink]="['/', 'agendamento', agendamento.nome]">
+              <span class="fa fa-edit"></span>
+            </a>
+            <button class="btn btn-outline-dark action-icon" (click)="removeAgendamento(agendamento.nome)">
+              <span class="fa fa-trash"></span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
